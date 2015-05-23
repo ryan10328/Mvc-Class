@@ -10,6 +10,7 @@ namespace MvcFirstApplication.Controllers
     {
         public ActionResult Index()
         {
+            var model = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             return View();
         }
 
