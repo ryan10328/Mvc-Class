@@ -239,6 +239,12 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvcFirstApplication.Models\MvcFirstApplication.DAL.csproj">
+      <Project>{339a3bd3-89d5-492c-a94b-b8dc202fc39a}</Project>
+      <Name>MvcFirstApplication.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

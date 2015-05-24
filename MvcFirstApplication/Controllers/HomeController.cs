@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcFirstApplication.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,17 @@ namespace MvcFirstApplication.Controllers
 {
     public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
-            var model = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            return View();
+            //var model = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            ProductService product = new ProductService();
+
+            var dt = product.GetProducts();
+
+
+            return View(dt);
         }
 
         public ActionResult About()
